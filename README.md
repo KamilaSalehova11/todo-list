@@ -1,16 +1,45 @@
-# React + Vite
+# Todo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React app to manage daily tasks. Built with Vite and React.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone the repository**:
 
-## React Compiler
+   ```bash
+   git clone https://github.com/kamilasalehova11/todo-list.git
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+   ```
 
-## Expanding the ESLint configuration
+2. **Navigate into the project directory**:
+   cd todo-list
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Install dependencies**:
+   npm install
+
+4. **Run the development server**:
+   npm run dev
+
+5. **The app will be running at**:
+   http://localhost:5173
+
+\* Add a Table of Contents (for a longer README):
+
+If you think your README might grow as you add more sections, a table of contents can help users navigate it more easily.
+Include Sections on:
+
+Features: Briefly describe key features or any unique aspects of the app.
+Contributing: Instructions for other developers who might want to contribute to your project.
+License: State the license under which your project is distributed. It’s a good practice for open source projects.
+Add Screenshots or a Demo:
+
+Visuals can greatly enhance understanding. If possible, include screenshots or a brief demo/gif of your app in action.
+Add a "Project Structure" Section:
+
+Briefly outline the structure of your project directories and files. This can help new developers understand the organization of your codebase.
+Badges:
+
+Add status badges (like build passing, version, etc.) if you connect your repository to services like Travis CI or Coveralls. They provide at-a-glance insights into the status of the project.
+Contact Information:
+
+Provide your contact details or a link to raise issues if someone needs support or wants to ask questions about the project. \*
