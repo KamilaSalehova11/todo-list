@@ -21,7 +21,7 @@ A simple React app to manage daily tasks. Built with Vite and React.
    npm run dev
 
 5. **The app will be running at**:
-   http://localhost:5173
+  http://localhost:5173 
 
 \* Add a Table of Contents (for a longer README):
 
