@@ -19,10 +19,13 @@ function App() {
   function completeTodo(id) {
     setTodoList((prev) =>
       prev.map((todo) =>
-        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
+        todo.id === id
+          ? { ...todo, isCompleted: true } // <- always mark complete
+          : todo
       )
     );
   }
+
 
   return (
     <div className="App">
