@@ -1,30 +1,30 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 
 function TodoForm({ onAddTodo }) {
-  const todoTitleInput = useRef(null); // step 2 will use this
+  const [title, setTitle] = useState('');
 
   function handleAddTodo(event) {
     event.preventDefault();
 
-    const title = event.target.title.value; // use the name
+    const trimmed = title.trim();
+    if (!trimmed) return;
 
-    if (!title.trim()) {
-      return;
-    }
-
-    onAddTodo(title);
-    event.target.title.value = ''; // clear with the name
-    todoTitleInput.current.focus(); // step 2: refocus
+    onAddTodo(trimmed);
+    setTitle(''); // clear input after submit
   }
 
   return (
     <form onSubmit={handleAddTodo}>
       <input
         type="text"
-        name="title" // important for event.target.title
-        ref={todoTitleInput} // important for focus()
+        name="title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Add a todo"
       />
-      <button>Add Todo</button>
+      <button type="submit" disabled={title.trim() === ''}>
+        Add Todo
+      </button>
     </form>
   );
 }

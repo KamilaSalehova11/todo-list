@@ -7,20 +7,28 @@ import './App.css';
 function App() {
   const [todoList, setTodoList] = useState([]);
 
-  function addTodo(title) {
+  function addTodo(text) {
     const newTodo = {
-      id: Date.now(),
-      title: title,
+      id: crypto.randomUUID(), // or Date.now()
+      title: text, // use "title" to match TodoListItem
+      isCompleted: false,
     };
+    setTodoList((prev) => [...prev, newTodo]);
+  }
 
-    setTodoList([...todoList, newTodo]);
+  function completeTodo(id) {
+    setTodoList((prev) =>
+      prev.map((todo) =>
+        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
+      )
+    );
   }
 
   return (
-    <div>
+    <div className="App">
       <h1>My Todos</h1>
       <TodoForm onAddTodo={addTodo} />
-      <TodoList todoList={todoList} />
+      <TodoList todoList={todoList} completeTodo={completeTodo} />
     </div>
   );
 }
