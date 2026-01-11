@@ -7,13 +7,15 @@ function TodoList({ todoList, completeTodo }) {
       {todoList.length === 0 ? (
         <p>Add todo above to get started</p>
       ) : (
-        todoList.map((todo) => (
-          <TodoListItem
-            key={todo.id}
-            todo={todo}
-            completeTodo={completeTodo}
-          />
-        ))
+        <ul>
+          {todoList.map((todo) => (
+            <TodoListItem
+              key={todo.id}
+              todo={todo}
+              completeTodo={completeTodo}
+            />
+          ))}
+        </ul>
       )}
     </div>
   );
